@@ -2,8 +2,8 @@ from typing import Optional, Type
 
 import torch
 import torch.nn as nn
-from torch.quantization.fx.fusion_patterns import ConvBNReLUFusion, ModuleReLUFusion
-from torch.quantization.fx.quantization_types import QuantizerCls
+from torch.ao.quantization.fx.fusion_patterns import ConvBNReLUFusion, ModuleReLUFusion
+from torch.ao.quantization.fx.quantization_types import QuantizerCls
 from torch.fx.graph import Node
 
 import mqbench.nn as qnn

@@ -5,7 +5,9 @@ from mqbench.prepare_by_platform import prepare_by_platform, BackendType
 from mqbench.convert_deploy import convert_deploy
 from mqbench.utils.state import enable_calibration, enable_quantization
 
-model_to_quantize = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False)
+from yolop import get_net
+
+model_to_quantize = get_net()
 dummy_input = torch.randn(2, 3, 224, 224, device='cpu')
 model_to_quantize.train()
 
